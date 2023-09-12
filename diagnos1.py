@@ -19,7 +19,7 @@
 #import isqrt 
 from math import isqrt
 
-#define function, where input is a int, and out put is a list of int
+#define function, where input is a int, and note that the function will retun a list[int]
 def sieve_of_eratosthenes(n: int) -> list[int]:
     #if inputted value is 2 or less or over 99 return empty list
     if n <= 2 or n > 99:
