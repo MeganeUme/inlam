@@ -1,21 +1,3 @@
-#Create a list with size n
-#check if n <= 2 or n > 99
-    #return empty list
-#make a boolean list of size n
-#set index 0 and 1 to False
-#loop through list starting from index 2 until sqrt of n
-#(if the prime > sqrt(n) then it's multiples are outside the range of the list and all subsequent numbers set as True are prime numbers)
-    #check if index i  in list is set to True
-        #mark all multiples of i as False by iterating though the list incrementing by i
-        #starting from i*i, up to n 
-        #(we can start from i*i since i always starts as the smallest prime number 2,
-        #so when we go though multiples of the next prime number smaller multiples will already be set as False)
-        #set position as False
-#
-#return all the numbers set to True 
-
-
-
 #import isqrt 
 from math import isqrt
 
@@ -43,8 +25,9 @@ def sieve_of_eratosthenes(n: int) -> list[int]:
     #return list of all numbers marked as True
     return [i for i in range(n) if is_prime[i]]
 
-
-
-if __name__ == '__main__':
+def main():
     num = int(input("Ange gränsen för primtal du vill skriva ut?: "))
     print(sieve_of_eratosthenes(num))
+
+if __name__ == '__main__':
+    main()
